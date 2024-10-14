@@ -3,8 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./css/styles.css" />
     <title>Document</title>
   </head>
-  <body></body>
+  <body>
+    <div class="box"></div>
+    <main class="main">
+      <div class="first-box">
+        <img class="logo" src="./assets/images/logo.svg" alt="logo" />
+        <div class="options">
+          <div class="option">
+            <img src="./assets/images/icon-document.svg" alt="icon document" />
+          </div>
+          <div class="option">
+            <img src="./assets/images/icon-folder.svg" alt="icon folder" />
+          </div>
+          <div class="option">
+            <img src="./assets/images/icon-upload.svg" alt="icon upload" />
+          </div>
+        </div>
+      </div>
+      <div class="second-box">
+        <p>You’ve used <span class="bold">815 GB</span> of your storage</p>
+
+        <div class="storage-bar">
+          <span class="start-value">0 GB</span>
+          <span class="end-value">1000 GB</span>
+        </div>
+        <div class="tooltip">
+          <span class="tooltip-number">185</span>
+          <span class="tooltip-remain">GB LEFT</span>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>

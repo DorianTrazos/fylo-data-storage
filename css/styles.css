@@ -25,5 +25,173 @@ ul {
 
 body {
   margin: 0;
-  font-family: sans-serif;
+  font-family: 'Raleway', serif;
+  background-color: #0f1b3d;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  /* vh -> viewport height -> 100vh -> Todo el alto de la página */
+  padding-left: 24px;
+  padding-right: 24px;
+  height: 100vh;
+  background-image: url(../assets/images/bg-mobile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media screen and (width>768px) {
+  .main {
+    flex-direction: row;
+    align-items: center;
+    height: 500px;
+    gap: 30px;
+    background-image: url(../assets/images/bg-desktop.png);
+    background-size: contain;
+    background-position: center bottom;
+  }
+}
+
+.first-box,
+.second-box {
+  background-color: #1e2d69;
+}
+
+.first-box {
+  padding: 40px 118px 40px 40px;
+  border-radius: 10px 100px 10px 10px;
+}
+
+@media screen and (width>768px) {
+  .first-box {
+    width: 350px;
+  }
+}
+
+.logo {
+  margin-bottom: 33px;
+}
+
+.options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background-color: #0c122c;
+}
+
+.second-box {
+  position: relative;
+  padding: 32px;
+  padding-bottom: 76px;
+  border-radius: 10px;
+  color: #dbd9ff;
+}
+
+@media screen and (width>768px) {
+  .second-box {
+    width: 540px;
+  }
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.storage-bar {
+  position: relative;
+  height: 20px;
+  padding: 3px;
+  border-radius: 10px;
+  background-color: #0c122c;
+}
+
+.storage-bar::before {
+  content: '';
+  position: absolute;
+  width: 70%;
+  height: 14px;
+  border-radius: 10px;
+  background-color: #ff4a95;
+}
+
+.storage-bar::after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 175px;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+@media screen and (width>768px) {
+  .storage-bar::after {
+    left: 322px;
+  }
+}
+
+.start-value,
+.end-value {
+  position: absolute;
+  top: 30px;
+}
+
+.end-value {
+  right: 0;
+}
+
+.tooltip {
+  position: absolute;
+  bottom: -40px;
+  left: 74px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  height: 72px;
+  border-radius: 10px;
+  background-color: #fff;
+  font-weight: 700;
+}
+
+@media screen and (width>768px) {
+  .tooltip {
+    left: 321px;
+    bottom: 150px;
+    border-bottom-right-radius: 0;
+  }
+
+  .tooltip::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -23px;
+    width: 23px;
+    height: 23px;
+    background-image: linear-gradient(45deg, transparent 50%, #fff 50%);
+  }
+}
+
+.tooltip-number {
+  margin-right: 9px;
+  font-size: 40px;
+  color: #0c122c;
+}
+
+.tooltip-remain {
+  font-size: 12px;
+  color: rgba(12, 18, 44, 0.5);
 }
